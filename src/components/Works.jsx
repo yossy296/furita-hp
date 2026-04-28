@@ -24,6 +24,13 @@ const works = [
     image: '/images/istanbul.jpg',
   },
   {
+    title: 'Plus White',
+    role: 'partner',
+    desc: 'ホワイトニングサロン',
+    url: 'https://www.instagram.com/plus_white369/',
+    image: '/images/pluswhite.png',
+  },
+  {
     title: '地球旅豆本',
     role: 'writer',
     desc: '旅行誌への記事・エッセイ掲載',
