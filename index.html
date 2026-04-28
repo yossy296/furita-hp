@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Furita's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Furita</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-sub">Hello, I'm</p>
+      <h1>Furita</h1>
+      <p class="hero-desc">Web Developer & Creator</p>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About</h2>
+    <div class="about-content">
+      <p>はじめまして、Furitaです。Webサイトやアプリケーションの開発を行っています。ユーザーにとって使いやすく、美しいプロダクトを作ることを目指しています。</p>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">&#60;/&#62;</div>
+        <h3>HTML / CSS</h3>
+        <p>レスポンシブでモダンなWebサイトを構築します。</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">JS</div>
+        <h3>JavaScript</h3>
+        <p>インタラクティブなUI/UXを実現します。</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">&#9881;</div>
+        <h3>Backend</h3>
+        <p>サーバーサイドの設計・開発を行います。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="works" class="works">
+    <h2>Works</h2>
+    <div class="works-grid">
+      <div class="work-card">
+        <div class="work-thumb">Project 1</div>
+        <h3>Sample Project</h3>
+        <p>サンプルプロジェクトの説明文が入ります。</p>
+      </div>
+      <div class="work-card">
+        <div class="work-thumb">Project 2</div>
+        <h3>Sample Project</h3>
+        <p>サンプルプロジェクトの説明文が入ります。</p>
+      </div>
+      <div class="work-card">
+        <div class="work-thumb">Project 3</div>
+        <h3>Sample Project</h3>
+        <p>サンプルプロジェクトの説明文が入ります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <form class="contact-form" onsubmit="return false;">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea rows="5" placeholder="Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Furita. All rights reserved.</p>
+  </footer>
+</body>
+</html>
