@@ -1,10 +1,11 @@
 import { motion } from 'motion/react'
 import { useInView } from './useInView'
+import { FaYoutube, FaTiktok, FaInstagram } from 'react-icons/fa6'
 
 const socials = [
-  { label: 'YouTube', url: 'https://youtube.com/@adhdbackpacker_furi315?si=YBxUBy101JPQhvOK' },
-  { label: 'TikTok', url: 'https://www.tiktok.com/@adhdbackpacker_furi315' },
-  { label: 'Instagram', url: 'https://www.instagram.com/adhdbackpacker_furi315' },
+  { label: 'YouTube', icon: FaYoutube, color: '#ff0000', url: 'https://youtube.com/@adhdbackpacker_furi315?si=YBxUBy101JPQhvOK' },
+  { label: 'TikTok', icon: FaTiktok, color: '#000000', url: 'https://www.tiktok.com/@adhdbackpacker_furi315' },
+  { label: 'Instagram', icon: FaInstagram, color: '#e4405f', url: 'https://www.instagram.com/adhdbackpacker_furi315' },
 ]
 
 export default function Contact() {
@@ -36,9 +37,9 @@ export default function Contact() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.06, y: -3 }}
             whileTap={{ scale: 0.95 }}
-            style={styles.socialBtn}
+            style={{ ...styles.socialBtn, background: s.color }}
           >
-            {s.label}
+            <s.icon size={24} />
           </motion.a>
         ))}
       </motion.div>
@@ -87,9 +88,14 @@ const styles = {
     flexWrap: 'wrap',
   },
   socialBtn: {
-    padding: '12px 32px',
-    borderRadius: 30,
+    padding: 16,
+    borderRadius: '50%',
     background: '#1a1a2e',
+    width: 56,
+    height: 56,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     color: '#fff',
     textDecoration: 'none',
     fontWeight: 600,
