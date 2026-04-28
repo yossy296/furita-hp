@@ -1,11 +1,13 @@
 import { motion } from 'motion/react'
 import { useInView } from './useInView'
 import { FaYoutube, FaTiktok, FaInstagram } from 'react-icons/fa6'
+import { SiNote } from 'react-icons/si'
 
 const socials = [
   { label: 'YouTube', icon: FaYoutube, color: '#ff0000', url: 'https://youtube.com/@adhdbackpacker_furi315?si=YBxUBy101JPQhvOK' },
   { label: 'TikTok', icon: FaTiktok, color: '#000000', url: 'https://www.tiktok.com/@adhdbackpacker_furi315' },
   { label: 'Instagram', icon: FaInstagram, color: '#e4405f', url: 'https://www.instagram.com/adhdbackpacker_furi315' },
+  { label: 'note', icon: SiNote, color: '#41c9b4', url: 'https://note.com/furi_mind315' },
 ]
 
 export default function Contact() {
@@ -37,9 +39,12 @@ export default function Contact() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.06, y: -3 }}
             whileTap={{ scale: 0.95 }}
-            style={{ ...styles.socialBtn, background: s.color }}
+            style={styles.socialItem}
           >
-            <s.icon size={24} />
+            <div style={{ ...styles.socialBtn, background: s.color }}>
+              <s.icon size={24} />
+            </div>
+            <span style={styles.socialLabel}>{s.label}</span>
           </motion.a>
         ))}
       </motion.div>
@@ -87,6 +92,13 @@ const styles = {
     marginBottom: 48,
     flexWrap: 'wrap',
   },
+  socialItem: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: 8,
+    textDecoration: 'none',
+  },
   socialBtn: {
     padding: 16,
     borderRadius: '50%',
@@ -97,12 +109,12 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     color: '#fff',
-    textDecoration: 'none',
-    fontWeight: 600,
-    fontSize: '0.95rem',
-    letterSpacing: 0.5,
     boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
-    display: 'inline-block',
+  },
+  socialLabel: {
+    fontSize: '0.8rem',
+    fontWeight: 600,
+    color: '#555',
   },
   form: {
     maxWidth: 520,
