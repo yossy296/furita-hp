@@ -42,7 +42,7 @@ export default function Navbar() {
           }}
           whileHover={{ scale: 1.05 }}
         >
-          Furita
+          Furi
         </motion.div>
 
         {/* Desktop links */}
